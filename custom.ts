@@ -601,11 +601,13 @@ namespace effects {
             100,
             true
         )
+        // which side does the bolt originate
         let side = d === Direction.Right ? -10 : 10
         healingBolt.setPosition(s.x - side, s.y)
+        // which direction does the bolt move on X axis
         let vel = d === Direction.Left ? -200 : 200
         healingBolt.setVelocity(vel, 0)
-        pause(1000)
+        pause(t*1000)
         healingBolt.destroy()
     }
 
